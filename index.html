@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Квартал Принт · квартальные календари с вашим логотипом</title>
+<meta name="description" content="Квартальные календари с логотипом на 2027 год, Казань: цена за штуку по тиражам, макет на согласование до печати, срок тиража называем заранее.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Квартал Принт · квартальные календари с вашим логотипом">
+<meta property="og:description" content="Цена за штуку по тиражам, макет на согласование до печати, срок тиража называем заранее.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preload" href="assets/fonts/piazzolla-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%275%27 y=%275%27 width=%2722%27 height=%2722%27 rx=%274%27 fill=%27%23cf6a44%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- шрифты: свои файлы, без Google Fonts ---------------------------- */
+  @font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 500 600; font-display: swap;
+    src: url(assets/fonts/piazzolla-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 500 600; font-display: swap;
+    src: url(assets/fonts/piazzolla-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
+  @font-face { font-family: "Piazzolla"; font-style: italic; font-weight: 500; font-display: swap;
+    src: url(assets/fonts/piazzolla-italic-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Piazzolla"; font-style: italic; font-weight: 500; font-display: swap;
+    src: url(assets/fonts/piazzolla-italic-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 600; font-display: swap;
+    src: url(assets/fonts/manrope-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 600; font-display: swap;
+    src: url(assets/fonts/manrope-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
+
+  /* ---- тема: палитра В (олива + кирпич) ------------------------------- */
+  .v-page {
+    --v-canvas: #15170f; --v-surface: #1d2015;
+    --v-ink: #efeadf; --v-ink-soft: #b5b6a4;
+    --v-accent: #cf6a44; --v-accent-ink: #1b0f09;
+    --v-font-display: "Piazzolla", "Georgia", "Times New Roman", serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 6 7 3;
+    --v-radius: 10px;
+  }
+  html, body { background: #15170f; }
+  .v-page .v-display { font-weight: 600; letter-spacing: -0.015em; }
+  .v-page .v-display--xl { line-height: .98; }
+  .v-page .v-display em { font-style: italic; font-weight: 500; color: var(--v-accent); }
+  .v-page .v-lede { font-weight: 500; }
+  .v-page [id] { scroll-margin-top: 5rem; }
+  .tap { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+  @media (max-width: 760px) {
+    .v-page { --v-t-sm: 1rem; --v-t-xs: 0.8125rem; }
+  }
+
+  /* ---- шапка: прозрачная на первом экране, плотная после ---------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between;
+    padding: var(--v-3) var(--v-gutter); gap: var(--v-4);
+    background: linear-gradient(to bottom, rgb(21 23 15 / .88), rgb(21 23 15 / 0));
+    transition: background-color .24s var(--v-ease-out), box-shadow .24s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(21 23 15); box-shadow: 0 1px 0 rgb(239 234 223 / .10), 0 8px 24px rgb(6 7 3 / .35); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-base); letter-spacing: 0; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; }
+  .bar__mark i { width: .7em; height: .7em; border-radius: 2px; background: var(--v-accent); display: inline-block; transform: rotate(45deg); }
+  .bar__right { display: flex; align-items: center; gap: var(--v-5); }
+  .bar__tel { font-weight: 600; font-size: var(--v-t-sm); color: var(--v-ink); padding: 0 .25em; }
+  @media (max-width: 760px) { .bar__tel { display: none; } .bar .v-btn { padding: .75em 1.1em; font-size: .9375rem; } }
+
+  /* ---- hero (вариант Б): шторка меняет «Трио» на «Трио-люкс» ------------- */
+  .v-page .hero__img img { object-position: 70% 50%; }
+  .hero__shade { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(to right, rgb(21 23 15 / .86) 0%, rgb(21 23 15 / .55) 34%, transparent 58%); }
+  .hero__floor { position: absolute; inset: auto 0 0 0; height: 26%; z-index: 2; pointer-events: none;
+    background: linear-gradient(to top, var(--v-canvas) 0%, rgb(21 23 15 / .5) 50%, transparent 100%); }
+  .hero__copy { position: absolute; z-index: 3; left: var(--v-gutter); top: clamp(6.5rem, 17vh, 11rem); max-width: min(46rem, 54vw); }
+  .hero__copy .v-display { font-size: clamp(2.6rem, 4.6vw, 4.4rem); max-width: 18ch; }
+  .hero__copy .v-display .v-k:nth-of-type(10) .v-ki { font-style: italic; font-weight: 500; color: var(--v-accent); }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 40ch; color: var(--v-ink); opacity: .92; }
+  .hero__cta { margin-top: var(--v-6); }
+  .hero__note { position: absolute; z-index: 3; left: var(--v-gutter); bottom: clamp(2rem, 6vh, 4rem); max-width: 50vw;
+    display: flex; gap: var(--v-3) var(--v-8); flex-wrap: wrap; }
+  .hero__note > div { display: grid; gap: .15em; }
+  .hero__note .v-label { color: var(--v-ink-soft); }
+  .hero__note .v-nums { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); line-height: 1.1; }
+  .hero__note .v-nums b { color: var(--v-accent); font-weight: 500; }
+  .hero__tag { position: absolute; z-index: 3; right: var(--v-gutter); bottom: clamp(2rem, 6vh, 4rem); text-align: right; }
+  .hero__tag > span { position: absolute; right: 0; bottom: 0; white-space: nowrap; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); }
+  .hero__tag b { color: var(--v-ink); font-weight: 600; }
+  @media (max-height: 820px) and (min-width: 761px) {
+    .hero__copy { top: 5.5rem; }
+    .hero__copy .v-display { font-size: var(--v-t-2xl); }
+  }
+  @media (max-width: 1100px) and (min-width: 761px) { .hero__note { gap: var(--v-3) var(--v-6); } }
+  @media (max-width: 760px) {
+    .v-page .hero__img img { object-position: 76% 50%; }
+    .hero__shade { background: linear-gradient(to bottom, rgb(21 23 15 / .9) 0%, rgb(21 23 15 / .7) 40%, transparent 62%); }
+    .hero__copy { top: clamp(5.25rem, 12vh, 7rem); right: var(--v-gutter); max-width: none; }
+    .hero__copy .v-display { font-size: var(--v-t-2xl); }
+    .hero__copy .v-lede { max-width: 32ch; }
+    .hero__note { display: none; }
+    .hero__tag { left: var(--v-gutter); text-align: left; bottom: 1.5rem; }
+    .hero__tag > span { left: 0; right: auto; }
+  }
+
+  /* ---- фирменный ход: конфигуратор вида календаря ------------------------ */
+  .conf { position: absolute; inset: 0; }
+  .v-page .conf__img { position: absolute; inset: 0 -6% -16% -6%; width: 112%; max-width: none; height: 116%; object-fit: cover; object-position: 70% 50%; will-change: opacity; }
+  .v-page .conf__img + .conf__img { opacity: 0; }
+  .conf__shade { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(to right, rgb(21 23 15 / .82) 0%, rgb(21 23 15 / .45) 36%, transparent 60%); }
+  .conf__top { position: absolute; z-index: 3; left: var(--v-gutter); right: var(--v-gutter); top: clamp(5.5rem, 13vh, 8rem); }
+  .conf__top > div:first-child, .conf__rep { max-width: 40rem; }
+  .conf__top .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .conf__top .v-display { margin-bottom: var(--v-5); }
+  .conf__rep { position: relative; min-height: 10rem; }
+  .conf__rep > div { position: absolute; left: 0; top: 0; max-width: 34rem; }
+  .conf__rep h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-xl); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: var(--v-2); }
+  .conf__rep p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 42ch; }
+  .conf__rep p b { color: var(--v-ink); font-weight: 500; }
+  .conf__rep .price { display: block; margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink); }
+  .conf__rep .price b { color: var(--v-accent); font-weight: 600; }
+  .sw { position: absolute; z-index: 3; right: 0; top: 0; display: grid; gap: var(--v-3); }
+  .sw__btn { display: flex; align-items: center; justify-content: flex-end; gap: var(--v-3); padding: 0; min-height: 44px; text-align: right; }
+  .sw__btn span { font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); transition: color .18s var(--v-ease-out), opacity .18s var(--v-ease-out); opacity: .6; }
+  /* значок вида: шапка сверху и блоки под ней */
+  .sw__btn i { width: 2.25rem; height: 2.75rem; border-radius: 4px; background-color: var(--v-surface);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / .18), 0 0 0 2px transparent, var(--v-e1);
+    transition: box-shadow .18s var(--v-ease-out), transform .18s var(--v-ease-out); }
+  .sw__btn.is-on span { color: var(--v-ink); opacity: 1; }
+  .sw__btn.is-on i { box-shadow: inset 0 0 0 1px rgb(255 255 255 / .18), 0 0 0 2px var(--v-accent), var(--v-e1); transform: scale(1.1); }
+  @media (hover: hover) and (pointer: fine) { .sw__btn:hover span { color: var(--v-ink); opacity: 1; } .sw__btn:hover i { transform: scale(1.06); } }
+  .sw__btn--mini i { background-image: linear-gradient(#cf6a44, #cf6a44), linear-gradient(#efeadf, #efeadf);
+    background-size: 70% 34%, 70% 26%; background-position: 50% 12%, 50% 70%; background-repeat: no-repeat; }
+  .sw__btn--trio i { background-image: linear-gradient(#cf6a44, #cf6a44), linear-gradient(#efeadf, #efeadf), linear-gradient(#efeadf, #efeadf), linear-gradient(#efeadf, #efeadf);
+    background-size: 70% 30%, 70% 14%, 70% 14%, 70% 14%; background-position: 50% 8%, 50% 52%, 50% 72%, 50% 92%; background-repeat: no-repeat; }
+  .sw__btn--lux i { background-image: linear-gradient(135deg, #e3a27a, #9c4a2c), linear-gradient(#efeadf, #efeadf), linear-gradient(#efeadf, #efeadf), linear-gradient(#efeadf, #efeadf);
+    background-size: 80% 34%, 70% 13%, 70% 13%, 70% 13%; background-position: 50% 6%, 50% 54%, 50% 73%, 50% 92%; background-repeat: no-repeat; }
+  .conf__cta { position: absolute; z-index: 3; left: var(--v-gutter); bottom: clamp(2.5rem, 8vh, 5rem); }
+  @media (max-width: 760px) {
+    .v-page .conf__img { inset: auto -42% 0 -42%; width: 184%; height: auto; object-fit: unset;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 34%); mask-image: linear-gradient(to bottom, transparent 0%, #000 34%); }
+    .conf__shade { display: none; }
+    .conf__top { right: var(--v-gutter); max-width: none; top: clamp(4.5rem, 10vh, 6rem); }
+    .conf__top .v-display { margin-bottom: var(--v-4); }
+    .conf__rep { min-height: 12rem; }
+    .conf__rep h3 { font-size: var(--v-t-lg); }
+    .sw { position: relative; top: auto; right: auto; margin-top: var(--v-3); grid-auto-flow: column; justify-content: start; gap: var(--v-4); }
+    .sw__btn { flex-direction: column; gap: var(--v-2); min-width: 48px; min-height: 48px; padding: 4px 6px; text-align: center; justify-content: flex-start; }
+    .sw__btn span { font-size: .75rem; letter-spacing: .04em; }
+    .conf__cta { display: none; }
+  }
+
+  /* ---- сколько стоит: три строки с ценой справа --------------------------- */
+  .price { display: grid; grid-template-columns: .8fr 1.4fr; gap: var(--v-9); align-items: start; }
+  .price__head .v-body { color: var(--v-ink-soft); margin-top: var(--v-4); }
+  .price__rows li { display: grid; grid-template-columns: 1fr auto; gap: var(--v-2) var(--v-6); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); align-items: start; }
+  .price__rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .price__rows h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; }
+  .price__rows p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 40ch; }
+  .price__rows .sum { grid-column: 2; grid-row: 1 / span 2; font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); line-height: 1.1; color: var(--v-accent); text-align: right; white-space: nowrap; }
+  .price__rows .sum small { display: block; font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); margin-top: .35em; }
+  .price__note { margin-top: var(--v-5); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 60ch; }
+  .price__note b { color: var(--v-ink); font-weight: 500; }
+  .price > * { min-width: 0; }
+  @media (max-width: 1000px) {
+    .price { grid-template-columns: 1fr; gap: var(--v-6); }
+    .price__rows li { grid-template-columns: 1fr; }
+    .price__rows .sum { grid-column: 1; grid-row: auto; text-align: left; white-space: normal; margin-top: var(--v-2); }
+  }
+
+  /* ---- готовые тиражи: мозаика 4 колонки под фото заказчика ------------- */
+  .works__head { display: flex; flex-wrap: wrap; gap: var(--v-4) var(--v-8); align-items: end; justify-content: space-between; margin-bottom: var(--v-7); }
+  .works__head .v-body { color: var(--v-ink-soft); max-width: 46ch; }
+  .works__grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(11rem, 17vw, 15rem); gap: var(--v-4); }
+  .work { position: relative; border-radius: var(--v-radius); overflow: hidden; background: var(--v-surface); box-shadow: var(--v-edge), var(--v-e1); }
+  .work--wide { grid-column: span 2; }
+  .v-page .work__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .v-page .work__img:not([src]) { display: none; }
+  .work__empty { position: absolute; inset: 0; display: grid; align-content: start; justify-items: center; gap: .3em; text-align: center; padding: 22% var(--v-4) var(--v-4);
+    background: radial-gradient(70% 60% at 50% 40%, rgb(207 106 68 / .10), transparent 70%); }
+  .work__empty .v-label { color: var(--v-ink-soft); }
+  .work__empty b { font-family: var(--v-font-display); font-weight: 500; font-style: italic; font-size: var(--v-t-lg); color: var(--v-ink); line-height: 1.1; }
+  .work.is-photo .work__empty { display: none; }
+  .work.is-photo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(to top, rgb(21 23 15 / .8), transparent); }
+  .work figcaption { position: absolute; z-index: 2; left: var(--v-4); right: var(--v-4); bottom: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); line-height: 1.4; }
+  .work figcaption b { color: var(--v-ink); font-weight: 600; }
+  @media (max-width: 1000px) {
+    .works__grid { grid-auto-rows: clamp(12rem, 25vw, 14rem); }
+    .work__empty { padding-top: 12%; }
+    .work__empty b { font-size: var(--v-t-base); }
+  }
+  @media (max-width: 760px) {
+    .works__head { margin-bottom: var(--v-6); }
+    .works__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(11rem, 52vw, 14rem); gap: var(--v-3); }
+    .work__empty { padding-top: 16%; }
+    .work__empty b { font-size: var(--v-t-base); }
+    .work figcaption { left: var(--v-3); right: var(--v-3); bottom: var(--v-3); }
+  }
+
+  /* ---- из чего состоит: факты строками + три макро с шторками ----------- */
+  .mat { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--v-9); align-items: start; }
+  .mat__facts li { padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-2); }
+  .mat__facts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .mat__facts h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; }
+  .mat__facts p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 46ch; }
+  .mat__figs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-5); align-items: start; }
+  .mat__figs figure { position: relative; border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--v-e2), var(--v-edge); }
+  .mat__figs figure img { width: 100%; height: 100%; object-fit: cover; }
+  .mat__figs figure:nth-child(2) { margin-top: var(--v-9); }
+  .mat__figs figure:nth-child(3) { margin-top: calc(-1 * var(--v-8)); }
+  .mat__figs figcaption { position: absolute; left: var(--v-4); right: var(--v-4); top: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); }
+  @media (max-width: 760px) {
+    .mat { grid-template-columns: 1fr; gap: var(--v-7); }
+    .mat__figs { gap: var(--v-4); }
+    .mat__figs figure:nth-child(2) { margin-top: var(--v-7); }
+    .mat__figs figure:nth-child(3) { margin-top: calc(-1 * var(--v-6)); }
+  }
+
+  /* ---- опыт: шесть промахов раскрывающимися строками -------------------- */
+  .exp { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--v-7) var(--v-9); align-items: start; }
+  .exp__head .v-display { max-width: 14ch; }
+  .exp__sign { display: flex; align-items: center; gap: var(--v-4); margin-top: var(--v-5); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .exp__sign b { color: var(--v-ink); font-weight: 600; }
+  .exp__mark, .v-page .exp__face { width: 56px; height: 56px; border-radius: 50%; flex: none; }
+  .v-page .exp__face { object-fit: cover; }
+  .v-page .exp__face:not([src]) { display: none; }
+  .exp__mark { display: grid; place-items: center; box-shadow: inset 0 0 0 1px var(--v-hair-strong); background: var(--v-surface); }
+  .exp__mark i { width: 12px; height: 12px; border-radius: 2px; background: var(--v-accent); transform: rotate(45deg); }
+  .exp__sign.is-photo .exp__mark { display: none; }
+  .exp__list { grid-column: 1 / -1; }
+  .exp__row { border-top: 1px solid var(--v-hair); }
+  .exp__row:last-child { border-bottom: 1px solid var(--v-hair); }
+  .exp__row summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: var(--v-6); align-items: center; padding: var(--v-5) 0; min-height: 44px; }
+  .exp__row summary::-webkit-details-marker { display: none; }
+  .exp__row summary:focus-visible { outline-offset: -3px; }
+  .exp__q { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; max-width: 34ch; text-wrap: balance; }
+  .exp__plus { position: relative; width: 2.25rem; height: 2.25rem; border-radius: 50%; flex: none; box-shadow: inset 0 0 0 1px var(--v-hair-strong); transition: transform .24s var(--v-ease-out), box-shadow .18s var(--v-ease-out); }
+  .exp__plus::before, .exp__plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 2px; background: var(--v-ink); transform: translate(-50%, -50%); }
+  .exp__plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+  .exp__row[open] .exp__plus { transform: rotate(45deg); box-shadow: inset 0 0 0 1px var(--v-accent); }
+  .exp__row[open] .exp__plus::before, .exp__row[open] .exp__plus::after { background: var(--v-accent); }
+  @media (hover: hover) and (pointer: fine) { .exp__row summary:hover .exp__plus { transform: scale(1.06); } .exp__row[open] summary:hover .exp__plus { transform: rotate(45deg) scale(1.06); } }
+  .exp__a { display: grid; grid-template-columns: 11rem 1fr; gap: var(--v-4) var(--v-6); padding: 0 0 var(--v-6); max-width: 64rem; animation: exp-in .32s var(--v-ease-out) both; }
+  .exp__how { color: var(--v-accent); padding-top: .3em; }
+  .exp__a p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 58ch; text-wrap: pretty; }
+  @keyframes exp-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .exp__end { grid-column: 2; margin-top: var(--v-2); font-family: var(--v-font-display); font-weight: 500; font-style: italic; font-size: var(--v-t-xl); line-height: 1.25; letter-spacing: -0.01em; max-width: 26ch; text-wrap: pretty; }
+  .exp__end b { color: var(--v-accent); font-weight: 500; }
+  @media (max-width: 1000px) { .exp__a { grid-template-columns: 1fr; gap: var(--v-2); } .exp__how { padding-top: 0; } }
+  @media (max-width: 760px) {
+    .exp { grid-template-columns: 1fr; gap: var(--v-6); }
+    .exp__head .v-display { max-width: none; }
+    .exp__sign { margin-top: var(--v-4); }
+    .exp__row summary { gap: var(--v-4); padding: var(--v-4) 0; }
+    .exp__q { font-size: var(--v-t-base); }
+    .exp__a { padding-bottom: var(--v-5); }
+    .exp__end { grid-column: 1; font-size: var(--v-t-lg); }
+  }
+  @media (prefers-reduced-motion: reduce) { .exp__a { animation-duration: .01s; } .exp__plus { transition: none; } }
+
+  /* ---- как заказать: пять шагов ------------------------------------------ */
+  .steps { display: grid; grid-template-columns: .9fr 1.3fr; gap: var(--v-9); align-items: start; }
+  .steps__head { position: sticky; top: clamp(5rem, 14vh, 8rem); }
+  .steps__head .v-body { color: var(--v-ink-soft); margin-top: var(--v-4); }
+  .steps__head .v-body b { color: var(--v-ink); font-weight: 500; }
+  .steps__list li { display: grid; grid-template-columns: 4.5rem 1fr; gap: var(--v-4); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); align-items: start; }
+  .steps__list li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .steps__list .num { font-family: var(--v-font-display); font-weight: 500; font-style: italic; font-size: var(--v-t-2xl); line-height: 1; color: var(--v-accent); }
+  .steps__list h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: var(--v-2); }
+  .steps__list p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 48ch; }
+  .steps__list p b { color: var(--v-ink); font-weight: 500; }
+  @media (max-width: 760px) {
+    .steps { grid-template-columns: 1fr; gap: var(--v-7); }
+    .steps__head { position: static; }
+    .steps__list li { grid-template-columns: 3rem 1fr; }
+    .steps__list .num { font-size: var(--v-t-xl); }
+  }
+
+  /* ---- финал: по центру, свет за курсором --------------------------------- */
+  .close { height: 100%; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(56rem 38rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .45) * 100%), rgb(207 106 68 / .16), transparent 62%); }
+  .close__inner { align-self: center; text-align: center; display: flex; flex-direction: column; align-items: center; padding-top: var(--v-9); }
+  .close__inner .v-display { max-width: 20ch; }
+  .close__inner .v-lede { margin: var(--v-5) auto 0; max-width: 42ch; color: var(--v-ink-soft); }
+  .close__cta { margin-top: var(--v-7); }
+  .close__hint { margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .close__meta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 var(--v-7); margin-top: var(--v-6); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .close__meta a { color: var(--v-ink); font-weight: 600; }
+  .close__meta b { color: var(--v-ink); font-weight: 500; }
+  .foot { display: flex; justify-content: space-between; gap: var(--v-2) var(--v-4); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); color: var(--v-ink-soft); flex-wrap: wrap; }
+  @media (max-width: 760px) {
+    .close__inner { padding-top: var(--v-7); }
+    .close__inner .v-lede { max-width: 32ch; margin-top: var(--v-4); }
+    .close__cta { margin-top: var(--v-5); }
+    .close__hint { margin-top: var(--v-2); }
+    .close__meta { flex-direction: column; gap: 0; margin-top: var(--v-3); }
+    .foot { padding: var(--v-4) 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .hero__tag span:first-child { display: none; } .hero__tag span:last-child { visibility: visible !important; } }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+  <div class="v-grain" aria-hidden="true"></div>
+
+  <header class="bar" id="bar">
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Квартал Принт</a>
+    <div class="bar__right">
+      <a class="bar__tel tap" href="tel:+79001234567">+7 900 123-45-67</a>
+      <a class="v-btn" href="#raschet">Рассчитать тираж</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1 · УЗНАВАНИЕ: hero, вариант Б – шторка меняет «Трио» на «Трио-люкс» -->
+    <section data-v-act="pin" data-v-span="2.2" data-v-drift="#15170f" aria-label="Квартальные календари с вашим логотипом">
+      <div data-v-stage>
+        <div class="v-fill hero__img">
+          <img src="assets/cal-trio.webp" alt="" width="1920" height="1080">
+        </div>
+        <div class="v-fill hero__img" data-v-reveal="left" data-v-reveal-at="0.05 0.45">
+          <img src="assets/cal-lux.webp" alt="" width="1920" height="1080">
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__floor" aria-hidden="true"></div>
+
+        <div class="hero__copy">
+          <h1 class="v-display v-display--xl" data-v-cue="0 0.9 0" data-v-kinetic="lines" data-hero-cue>Календари для ваших клиентов в Казани – с вашим логотипом</h1>
+          <div data-v-cue="0 0.9 0" data-v-rise="0" data-hero-cue>
+            <p class="v-lede">Цена за штуку по тиражам сразу, макет с логотипом на согласование до печати, срок тиража называем заранее.</p>
+            <div class="hero__cta"><a class="v-btn" href="#raschet">Рассчитать тираж</a></div>
+          </div>
+        </div>
+
+        <div class="hero__note" data-v-cue="0 0.75 0" data-v-rise="0" data-hero-cue>
+          <div><span class="v-label">Сетка на</span><span class="v-nums"><b>2027</b> год</span></div>
+          <div><span class="v-label">Макет с логотипом</span><span class="v-nums">до печати</span></div>
+          <div><span class="v-label">Срок тиража</span><span class="v-nums">от 7 дней</span></div>
+        </div>
+
+        <div class="hero__tag" aria-hidden="true">
+          <span data-v-cue="0 0.22 0 0.05" data-v-rise="0"><b>«Трио»</b> · шапка и три блока</span>
+          <span data-v-cue="0.24 0.9 0.05 0.05" data-v-rise="0"><b>«Трио-люкс»</b> · шапка с тиснением</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ПОВОРОТ: конфигуратор вида календаря (фирменный ход) -->
+    <section data-v-act="pin" data-v-span="2.2" data-v-drift="#191c12" id="vidy" aria-label="Виды календарей">
+      <div data-v-stage>
+        <div class="conf" aria-hidden="true">
+          <img class="conf__img" src="assets/cal-mini.webp" alt="" width="1920" height="1080">
+          <img class="conf__img" src="assets/cal-trio.webp" alt="" width="1920" height="1080" loading="lazy">
+          <img class="conf__img" src="assets/cal-lux.webp" alt="" width="1920" height="1080" loading="lazy">
+        </div>
+        <div class="conf__shade" aria-hidden="true"></div>
+
+        <div class="conf__top">
+          <div data-v-cue="0 1 0 0" data-v-rise="0">
+            <span class="v-label">Виды календарей</span>
+            <h2 class="v-display v-display--md">Одна стена. Три календаря.</h2>
+          </div>
+          <div class="conf__rep">
+            <div data-v-cue="0 0.27 0 0.07">
+              <h3>«Мини»</h3>
+              <p><b>Шапка и один блок</b> на текущий месяц, бегунок по датам. Помещается на узкий простенок и дверь кабинета.</p>
+              <span class="price v-nums">Цена за штуку: <b>от 120 ₽</b></span>
+            </div>
+            <div data-v-cue="0.23 0.77 0.07 0.07">
+              <h3>«Трио»</h3>
+              <p><b>Шапка и три блока:</b> прошлый, текущий и следующий месяц. Бегунок отмечает сегодняшний день. Классика для офиса.</p>
+              <span class="price v-nums">Цена за штуку: <b>от 190 ₽</b></span>
+            </div>
+            <div data-v-cue="0.73 2 0.07 0">
+              <h3>«Трио-люкс»</h3>
+              <p><b>Те же три блока,</b> шапка с объёмом или тиснением фольгой. Для партнёров и подарков к Новому году.</p>
+              <span class="price v-nums">Цена за штуку: <b>от 340 ₽</b></span>
+            </div>
+          </div>
+
+          <div class="sw" role="group" aria-label="Выбор вида календаря">
+            <button class="sw__btn sw__btn--mini is-on" type="button" data-sw="0"><span>Мини</span><i aria-hidden="true"></i></button>
+            <button class="sw__btn sw__btn--trio" type="button" data-sw="1"><span>Трио</span><i aria-hidden="true"></i></button>
+            <button class="sw__btn sw__btn--lux" type="button" data-sw="2"><span>Люкс</span><i aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div class="conf__cta">
+          <a class="v-btn" href="#raschet" data-v-cue="0.55 0.99 0.06 0.03">Рассчитать тираж</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ЦЕНА: сколько стоит штука -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#15170f" id="ceny" aria-label="Сколько стоит">
+      <div class="v-wrap price">
+        <div class="price__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Сколько стоит</h2>
+          <p class="v-body">Цена за штуку зависит от вида календаря и тиража: чем больше тираж, тем дешевле штука. Срок изготовления называем вместе с ценой, до оплаты.</p>
+        </div>
+        <div data-v-in data-v-stagger="80">
+          <ul class="price__rows">
+            <li>
+              <h3>«Мини»: шапка и один блок</h3>
+              <p>Ваш логотип и контакты на шапке, сетка на 2027 год, пружина и бегунок.</p>
+              <span class="sum v-nums">от 120 ₽<small>за штуку, от тиража</small></span>
+            </li>
+            <li>
+              <h3>«Трио»: шапка и три блока</h3>
+              <p>Самый частый заказ для клиентов и партнёров: три месяца перед глазами, бегунок по дням.</p>
+              <span class="sum v-nums">от 190 ₽<small>за штуку, от тиража</small></span>
+            </li>
+            <li>
+              <h3>«Трио-люкс»: объёмная шапка</h3>
+              <p>Шапка с объёмом или тиснением фольгой. Логотип заметно с другого конца кабинета.</p>
+              <span class="sum v-nums">от 340 ₽<small>за штуку, от тиража</small></span>
+            </li>
+          </ul>
+          <p class="price__note">Пришлите логотип, вид и тираж – ответим <b>ценой за штуку</b> и <b>сроком изготовления</b>. Цена, названная до оплаты, не меняется.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 5 · ДОКАЗАТЕЛЬСТВО: из чего состоит календарь -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#15170f" id="sostav" aria-label="Из чего состоит календарь">
+      <div class="v-wrap mat">
+        <div class="v-stack" data-v-in data-v-stagger="60">
+          <h2 class="v-display v-display--lg">Из чего состоит календарь</h2>
+          <p class="v-body v-soft">Три детали решают, будет ли календарь висеть весь год или уедет в ящик стола к февралю: шапка, блоки на пружине и бегунок.</p>
+          <ul class="mat__facts">
+            <li><h3>Шапка с вашим логотипом</h3><p>Самая заметная часть: логотип, контакты, картинка. Картон, ламинацию и тиснение подбираем под вид календаря и бюджет.</p></li>
+            <li><h3>Блоки на пружине</h3><p>Сетка на 2027 год с выходными и праздниками. Блоки на одной пружине висят ровно и листаются без перекоса.</p></li>
+            <li><h3>Бегунок</h3><p>Окошко, которое двигают по дням. Без него квартальник просто плакат, с ним на календарь смотрят каждое утро, а вместе с ним и на ваш логотип.</p></li>
+          </ul>
+        </div>
+        <div class="mat__figs">
+          <figure data-v-reveal="up" data-v-reveal-at="0.12 0.42">
+            <img src="assets/header-edge.webp" alt="Кромка картонной шапки календаря крупно" width="1200" height="1600" loading="lazy">
+            <figcaption>Шапка, кромка</figcaption>
+          </figure>
+          <figure data-v-reveal="left" data-v-reveal-at="0.2 0.5">
+            <img src="assets/spring.webp" alt="Металлическая пружина в отверстиях блоков календаря" width="1200" height="1600" loading="lazy">
+            <figcaption>Пружина</figcaption>
+          </figure>
+          <figure data-v-reveal="up" data-v-reveal-at="0.3 0.6">
+            <img src="assets/slider.webp" alt="Красный бегунок на сетке календаря" width="1200" height="1600" loading="lazy">
+            <figcaption>Бегунок</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · ОПЫТ: шесть промахов раскрывающимися строками -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#191c12" id="opyt" aria-label="Что мы знаем о календарях">
+      <div class="v-wrap exp">
+        <div class="exp__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Шесть промахов, которые <em>ловим</em> до печати</h2>
+        </div>
+        <div class="exp__intro" data-v-in data-v-stagger="80">
+          <p class="v-body">На экране макет всегда красивый. Неприятности начинаются, когда тираж уже напечатан: логотип темнее, чем в фирменном стиле, а в сетке потерялся перенос выходного. Шесть таких промахов мы знаем в лицо и ловим до печати.</p>
+        </div>
+        <div class="exp__list" data-v-in data-v-stagger="70">
+          <details class="exp__row" open>
+            <summary><span class="exp__q">Логотип в печати не того цвета</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как делаем мы</span><p>Экран светится, бумага отражает: яркий синий с монитора на бумаге выходит темнее. Готовим макет в цветах печати и присылаем на согласование до запуска тиража.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Ошибка в сетке, которую заметили в январе</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как делаем мы</span><p>Сверяем сетку с производственным календарём на 2027 год: выходные, праздники, переносы. Ошибку после печати не исправить, только перепечатать весь тираж.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Шапка выгибается волной через месяц</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как делаем мы</span><p>Тонкий картон на тёплой офисной стене коробится. Плотность картона подбираем под размер шапки, чтобы календарь висел ровно до декабря.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Бегунок спадает или не двигается</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как делаем мы</span><p>Бегунок должен идти по блоку с лёгким усилием: не слетать и не застревать. Подбираем его по ширине блока и проверяем на собранном образце.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Мелкий текст на шапке не читается</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как делаем мы</span><p>Календарь висит на стене, а не лежит в руках. Телефон и сайт на шапке делаем таким кеглем, чтобы их было видно с рабочего места, а не только вплотную.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Тираж приезжает после праздников</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как делаем мы</span><p>Календари нужны к раздаче клиентам, а в декабре загружены все типографии. Срок изготовления называем до оплаты и держим его, чтобы тираж успел к вашим подаркам.</p></div>
+          </details>
+        </div>
+        <p class="exp__end" data-v-in data-v-in-self>Календарь висит у клиента целый год. Пусть каждый день он <b>напоминает о вас</b>, а не о том, как сэкономили на печати.</p>
+      </div>
+    </section>
+
+    <!-- 7 · ВЫБОР: как заказать (блок отзывов убран: настоящих отзывов пока нет) -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#121409" id="kak" aria-label="Как заказать">
+      <div class="v-wrap steps">
+        <div class="steps__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Как заказать</h2>
+          <p class="v-body">Пять шагов от заявки до коробок с календарями. <b>Цена за штуку</b> и <b>срок</b> известны до оплаты, <b>макет</b> вы видите до печати.</p>
+        </div>
+        <ol class="steps__list" data-v-in data-v-stagger="90">
+          <li><span class="num">1</span><div><h3>Заявка</h3><p>Пишете вид календаря, тираж и к какой дате нужен. Отвечаем <b>ценой за штуку и сроком</b> изготовления.</p></div></li>
+          <li><span class="num">2</span><div><h3>Макет с вашим логотипом</h3><p>Присылаете логотип и контакты, можно свою картинку для шапки. Собираем макет шапки и сетки на 2027 год.</p></div></li>
+          <li><span class="num">3</span><div><h3>Согласование</h3><p>Показываем макет целиком. Правим, пока не утвердите: <b>в печать уходит только то, что вы согласовали</b>.</p></div></li>
+          <li><span class="num">4</span><div><h3>Печать и сборка</h3><p>Печатаем шапки и блоки, собираем на пружину, ставим бегунок на каждый календарь.</p></div></li>
+          <li><span class="num">5</span><div><h3>Отгрузка</h3><p>Упаковываем тираж и отдаём в названный срок: самовывоз или доставка по городу.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 8 · ДЕЙСТВИЕ: расчёт тиража -->
+    <section data-v-act="pin" data-v-span="1.4" data-v-drift="#191c12" id="raschet" aria-label="Рассчитать тираж">
+      <div data-v-stage>
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <h2 class="v-display v-display--lg" data-v-cue="0 2 0 0" data-v-kinetic="lines">Пришлите логотип и тираж – посчитаем цену за штуку</h2>
+            <p class="v-lede" data-v-cue="0 2 0 0">Вид календаря, тираж и дата, к которой нужны. Ответим ценой за штуку и сроком изготовления, макет пришлём на согласование.</p>
+            <div class="close__cta" data-v-cue="0 2 0 0" data-v-rise="0">
+              <a class="v-btn" href="#raschet" data-v-magnet="0.22">Рассчитать тираж</a>
+            </div>
+            <p class="close__hint" data-v-cue="0 2 0 0">Календари на 2027 год: чем раньше заказ, тем спокойнее декабрь.</p>
+            <div class="close__meta" data-v-cue="0 2 0 0">
+              <a class="tap" href="tel:+79001234567">+7 900 123-45-67</a>
+              <span class="tap">Адрес: <b>&nbsp;Петербургская, 50</b>, Казань</span>
+              <span class="tap">Пн–Пт 9:00–18:00</span>
+            </div>
+          </div>
+          <footer class="foot">
+            <span>Квартал Принт · Казань</span>
+            <span>Квартальные календари с логотипом на 2027 год</span>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  // Без анимаций (в системе выключены эффекты анимации): движок показывает все реплики сразу,
+  // и реплики, стоящие в одном месте, ложатся друг на друга. Здесь они сменяются мгновенно,
+  // по тем же порогам прокрутки, что и с анимацией (реплика видна, пока её прозрачность была бы > 0.5).
+  (function () {
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function num(s, d) { var n = parseFloat(s); return isNaN(n) ? d : n; }
+    var items = [];
+    document.querySelectorAll('[data-v-act]').forEach(function (act) {
+      act.querySelectorAll('[data-v-cue]').forEach(function (el) {
+        if (el.closest('[data-v-act]') !== act) return;
+        var a = (el.getAttribute('data-v-cue') || '').trim().split(/\s+/);
+        var from = num(a[0], 0), to = num(a[1], 1), win = Math.max(Math.min(to, 1) - from, 0.0001);
+        var ri = a.length > 2 ? num(a[2], 0.3 * win) : 0.3 * win;
+        var ro = a.length > 3 ? num(a[3], 0.3 * win) : 0.3 * win;
+        items.push({ act: act, el: el, from: from, to: to, ri: ri, ro: ro, hold: a.length < 2, on: null });
+      });
+    });
+    // прозрачность реплики так же, как её считает движок (0..1)
+    function opa(c, p) {
+      var q = c.ri <= 0 ? (p >= c.from ? 1 : 0) : Math.min(Math.max((p - c.from) / c.ri, 0), 1);
+      if (c.hold) return q;
+      var out = c.ro <= 0 ? ((p >= c.to && c.to < 1) ? 0 : 1) : 1 - Math.min(Math.max((p - (c.to - c.ro)) / c.ro, 0), 1);
+      return Math.min(q, out);
+    }
+    // сменяющиеся реплики: у одного родителя несколько реплик с разными окнами – из них видна одна, самая проявленная
+    var groups = new Map();
+    items.forEach(function (c) { var k = c.el.parentNode; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(c); });
+    groups.forEach(function (g) {
+      var seq = g.length > 1 && g.some(function (c) { return c.from !== g[0].from || c.to !== g[0].to; });
+      g.forEach(function (c) { c.group = seq ? g : null; });
+    });
+    // движок ведёт --v-p сам (с догонялкой), поэтому сверяемся с ним каждый кадр
+    function loop() {
+      items.forEach(function (c) { c.o = opa(c, num(c.act.style.getPropertyValue('--v-p'), 0)); });
+      items.forEach(function (c) {
+        var on;
+        if (c.group) {
+          var best = null;
+          c.group.forEach(function (d) { if (d.o > 0.02 && (!best || d.o >= best.o)) best = d; });
+          on = best === c;
+        } else on = c.o > 0.5;
+        if (on !== c.on) { c.on = on; c.el.style.visibility = on ? '' : 'hidden'; }
+      });
+      requestAnimationFrame(loop);
+    }
+    loop();
+  })();
+</script>
+<script>
+  (function () {
+    // На телефоне текст hero не гаснет до конца сцены: реплики «встречают» и держатся.
+    if (window.matchMedia('(max-width: 760px)').matches) {
+      document.querySelectorAll('[data-hero-cue]').forEach(function (el) { el.setAttribute('data-v-cue', '0 1 0 0'); });
+    }
+    // Слоты картинок: пока слот не заполнен адресом, картинка не запрашивается и видна плашка.
+    document.querySelectorAll('img[data-src]').forEach(function (img) {
+      var src = img.getAttribute('data-src') || '';
+      if (!src || src.indexOf('{{') > -1) return;
+      img.src = src;
+      var host = img.closest('.work, .exp__sign'); if (host) host.classList.add('is-photo');
+    });
+  })();
+
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: плотный фон, как только уехал первый экран.
+  (function () {
+    var bar = document.getElementById('bar'), on = null;
+    function check() { var s = window.scrollY > 80; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', check, { passive: true }); check();
+  })();
+
+  // Фирменный ход: конфигуратор вида. Кадры одной стены с разными календарями лежат друг на друге,
+  // прозрачность верхних ведётся от --v-p акта: плато на каждом виде, кроссфейд между ними.
+  (function () {
+    var act = document.getElementById('vidy');
+    var imgs = act.querySelectorAll('.conf__img');
+    var sws = act.querySelectorAll('.sw__btn');
+    var N = imgs.length - 1;
+    var live = false, lastF = -1, lastN = -1;
+    var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function ss(t) { t = t < 0 ? 0 : t > 1 ? 1 : t; return t * t * (3 - 2 * t); }
+    function paint(f) {
+      for (var i = 1; i < imgs.length; i++) { var o = f - (i - 1); imgs[i].style.opacity = (o < 0 ? 0 : o > 1 ? 1 : o).toFixed(3); }
+      var n = Math.round(f);
+      if (n !== lastN) { lastN = n; sws.forEach(function (s, i) { s.classList.toggle('is-on', i === n); s.setAttribute('aria-pressed', i === n); }); }
+    }
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      var x = p * N, k = Math.min(Math.floor(x), N - 1), f = k + ss((x - k - 0.35) / 0.3);
+      if (f !== lastF) { lastF = f; paint(f); }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    tick();
+    // Клик по значку: прокрутка к тому месту акта, где этот вид стоит на плато.
+    var stops = [0.04, 0.5, 0.96];
+    sws.forEach(function (s, i) {
+      s.addEventListener('click', function () {
+        var top = act.getBoundingClientRect().top + window.scrollY;
+        var y = top + (act.offsetHeight - window.innerHeight) * stops[i];
+        window.scrollTo({ top: y, behavior: RM ? 'instant' : 'smooth' });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
